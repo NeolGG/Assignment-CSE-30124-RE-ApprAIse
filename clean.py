@@ -13,20 +13,15 @@ filtered_rows = []
 
 # Takes out any rows that have empty values-------------------
 
-
 with open(input_filename, 'r') as file:
     reader = csv.reader(file)
-    
-    # Get the header (column names)
     header = next(reader)
     filtered_rows.append(header)
 
     for row in reader:
-        # Check if there's any empty cell in the row
-        if all(cell for cell in row):
+        if all(cell for cell in row): # Check if there's any empty cell in the row
             filtered_rows.append(row)
 
-# Now, write the filtered_rows back to the same file
 with open(input_filename, 'w', newline='') as file:
     writer = csv.writer(file)
     writer.writerows(filtered_rows)
@@ -65,11 +60,10 @@ with open(input_filename, 'r') as file:
     filtered_rows.append(header)  # Append the header to the filtered rows list
     
     for row in reader:
-        # Check if there's any empty cell in the row and if the county is not in the exclude list
-        if all(row.values()) and row['CountyName'] not in lessthan15:
+        # Check if the county is not in the exclude list
+        if row['CountyName'] not in lessthan15:
             filtered_rows.append(list(row.values()))
 
-# Now, write the filtered_rows back to the same file or a new file
 with open(input_filename, 'w', newline='') as file:
     writer = csv.writer(file)
     writer.writerows(filtered_rows)
