@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
 import csv
 import sys
+import datetime as dt
+
+#cleans king_county data
 
 # Check if a filename is provided
 if len(sys.argv) < 2:
@@ -19,56 +22,29 @@ with open(input_filename, 'r') as file:
     filtered_rows.append(header)
 
     for row in reader:
-        if all(cell for cell in row): # Check if there's any empty cell in the row
+        if all(cell and cell != "?" for cell in row): # Check if there's any empty cell in the row
             filtered_rows.append(row)
 
-with open(input_filename, 'w', newline='') as file:
-    writer = csv.writer(file)
-    writer.writerows(filtered_rows)
+        # if int(float(row[12])):
+        #     row[11] = str(int(float(row[11])) - 5475)
+        
+        # if int(float(row[13])):
+        #     date1 = dt.date(int(float(row[13])),1,1)
+        #     date2 = dt.date(2016,1,1) #fake date for the model 
 
-#Creates a dictionary that counts how many times each county appears-----------------------------------------------
+        #     diff = date2 - date1
+        #     print(diff.days)
+        #     row[13] = str(diff.days)
 
-with open(input_filename, 'r') as file:
-    reader = csv.reader(file)
-    header = next(reader)
-    columns = {head: [] for head in header}
-    for row in reader:
-        for head, value in zip(header, row):
-            columns[head].append(value)
+        # date1 = dt.date(int(row[12]),1,1)
+        # date2 = dt.date(2016,1,1) #fake date for the model 
 
-counter = dict()
-lessthan15 = list()
-
-for county in columns['CountyName']:
-    counter[county] = counter.get(county, 0) + 1
-
-sCounties = [("County","Count")]
-sCounties += (sorted(counter.items(), key=lambda x: x[1], reverse=True))
-
-for item, value in sCounties[1:]:
-    if value < 15:
-        lessthan15.append(item)
-
-
-#Filter out rows with counties that appear less than 15 times ---------------------------
-
-filtered_rows = []
-
-with open(input_filename, 'r') as file:
-    reader = csv.DictReader(file)
-    header = reader.fieldnames
-    filtered_rows.append(header)  # Append the header to the filtered rows list
-    
-    for row in reader:
-        # Check if the county is not in the exclude list
-        if row['CountyName'] not in lessthan15:
-            filtered_rows.append(list(row.values()))
+        # diff = date2 - date1
+        # print(diff.days)
+        # row[12] = str(diff.days)
 
 with open(input_filename, 'w', newline='') as file:
     writer = csv.writer(file)
     writer.writerows(filtered_rows)
 
-# Creates csv file detailing each county and their respective count
-with open("County_count.csv", 'w', newline='') as file:
-    writer = csv.writer(file)
-    writer.writerows(sCounties)
+
