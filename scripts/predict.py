@@ -1,4 +1,7 @@
 #!/usr/bin/env python3
+
+# predictor
+
 import sys
 import csv
 import pandas as pd
@@ -17,7 +20,7 @@ def predict_price(model, input_data):
     return model.predict(input_data )
 
 if __name__ == "__main__":
-    model = load_model('kc_housingmodel.pkl')
+    model = load_model('../models/kc_housingmodel.pkl')
     # Features and corresponding values for prediction
 
     values = []

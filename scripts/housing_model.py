@@ -1,4 +1,7 @@
 #!/usr/bin/env python3
+
+#creates model
+
 import sys
 import numpy as np
 import pandas as pd
