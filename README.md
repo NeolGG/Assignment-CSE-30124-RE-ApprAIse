@@ -2,12 +2,28 @@
 
 ApprAIse as an AI model made for buyers and sellers to calculate the price/cost of housing. 
 
-# **Notes**
+## Getting Started
+
+Things you need to get setup
+
+### Prerequisites
+
+To install all the required packages, use the requirements.txt file provided
+
+    pip install -r requirements.txt
+
+
+## Usage
+
+### housing_model.py 
+
+This creates a model based on the data from a csv file. Usage:
+
+    ./housing_model.py input_file.csv
 
 The model uses a linear regression for proof of concept and assumes the user is browsing the market on January 1, 2016
 
-The model presented uses a 2014-2015 King-County Housing Dataset with the following labels:
-
+The model presented uses a 2014-2015 King-County Housing Dataset as the 'input_file.csv' with the following labels:
 
 - price:            Price asked
 - bedrooms:         # of bedrooms
@@ -28,5 +44,18 @@ Heres the link to the Kaggle Data:
 
 https://www.kaggle.com/datasets/doesnotcompile/nf-kc-house-data
 
+### predict.py
 
-# Documentation
+This predicts the value of a house given it's property details in the form of a csv file. Usage:
+
+    ./predict.py input_file.csv
+
+
+The 'input_file.csv' should have the data formatted with columns like this:
+
+    bedrooms,bathrooms,sqft_living,sqft_lot,floors,waterfront,condition,grade,sqft_above,sqft_basement,age,sqft_living15,sqft_lot15
+
+'csvs/exampleData.csv' is a good example of how data should be formatted with the columns, look at it to see example houses.
+
+![Alt text](image.png)
+
