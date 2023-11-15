@@ -1,6 +1,16 @@
 # Assignment-CSE-30124-RE-ApprAIse
-
 ApprAIse as an AI model made for buyers and sellers to calculate the price/cost of housing. 
+
+# Progress Report 3
+
+## NEW Python Notebook
+
+I added a python notebook that can be found [here](https://github.com/NeolGG/CSE-30124-RE-ApprAIse/blob/main/CSE_30124_RE_ApprAIse.ipynb)
+
+It uses the [USA Real Estate Dataset](https://www.kaggle.com/datasets/ahmedshahriarsakib/usa-real-estate-dataset) instead of the Kc_county dataset. The python notebook estimates a price based on housing data per STATE.
+
+
+# Progress Report 2
 
 ## Getting Started
 
@@ -59,3 +69,4 @@ The 'input_file.csv' should have the data formatted with columns like this:
 
 ![Alt text](image.png)
 
+[]
