@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python
 
 # predictor
 
@@ -32,6 +32,8 @@ if __name__ == "__main__":
             values.append(row)
 
     data = [dict(zip(features, v)) for v in values]
+
+    print(values)
     input_df = pd.DataFrame(data)
     
     predicted_prices = predict_price(model, input_df)
