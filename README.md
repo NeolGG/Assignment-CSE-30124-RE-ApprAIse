@@ -1,13 +1,13 @@
 # Assignment-CSE-30124-RE-ApprAIse
-ApprAIse as an AI model made for buyers and sellers to calculate the price/cost of housing. 
+ApprAIse is an AI model made for buyers and sellers to calculate the price/cost of housing by using Linear Regression based on features such as square footage, bedroom count, bathroom count, etc.
 
 # Progress Report 3
 
 ## NEW Python Notebook
 
-I added a python notebook that can be found [here](https://github.com/NeolGG/CSE-30124-RE-ApprAIse/blob/main/CSE_30124_RE_ApprAIse.ipynb)
+I added a Python notebook that can be found [here](https://github.com/NeolGG/CSE-30124-RE-ApprAIse/blob/main/CSE_30124_RE_ApprAIse.ipynb)
 
-It uses the [USA Real Estate Dataset](https://www.kaggle.com/datasets/ahmedshahriarsakib/usa-real-estate-dataset) instead of the Kc_county dataset. The python notebook estimates a price based on housing data per STATE.
+It uses the [USA Real Estate Dataset](https://www.kaggle.com/datasets/ahmedshahriarsakib/usa-real-estate-dataset) instead of the Kc_county dataset. The Python notebook estimates a price based on housing data per STATE.
 
 
 # Progress Report 2
@@ -27,7 +27,7 @@ To install all the required packages, use the requirements.txt file provided
 
 ### housing_model.py 
 
-This creates a model based on the data from a csv file. Usage:
+This creates a model based on the data from a CSV file. Usage:
 
     ./housing_model.py input_file.csv
 
@@ -38,25 +38,25 @@ The model presented uses a 2014-2015 King-County Housing Dataset as the 'input_f
 - price:            Price asked
 - bedrooms:         # of bedrooms
 - bathrooms:        # of bathrooms
-- sqft_living:      squarefootage of the home
-- sqft_lot:         squarefootage of the lot
+- sqft_living:      square footage of the home
+- sqft_lot:         square footage of the lot
 - floors:           total floors (levels) in house
-- waterfront:       whether it has a view to a waterfront (0 or 1)
+- waterfront:       whether it has a view of a waterfront (0 or 1)
 - condition:        how good the condition is ( Overall ) (1-5)
 - grade:            overall grade given to the housing unit, based on King County grading system (1-13)
-- sqft_above:       square footage of house apart from basement 
+- sqft_above:       square footage of house apart from the basement 
 - sqft_basement:    square footage of the basement
 - age:              amount of days passed since built to 1/1/2016
 - sqft_living15:    the square footage of interior housing living space for the nearest 15 neighbors
 - sqft_lot15:       the square footage of the land lots of the nearest 15 neighbors
 
-Heres the link to the Kaggle Data:
+Use this [link](https://www.kaggle.com/datasets/doesnotcompile/nf-kc-house-data) to access the dataset on kaggle.
 
-https://www.kaggle.com/datasets/doesnotcompile/nf-kc-house-data
+
 
 ### predict.py
 
-This predicts the value of a house given it's property details in the form of a csv file. Usage:
+This predicts the value of a house given itss property details in the form of a CSV file:
 
     ./predict.py input_file.csv
 
@@ -68,5 +68,3 @@ The 'input_file.csv' should have the data formatted with columns like this:
 'csvs/exampleData.csv' is a good example of how data should be formatted with the columns, look at it to see example houses.
 
 ![Alt text](image.png)
-
-[]
