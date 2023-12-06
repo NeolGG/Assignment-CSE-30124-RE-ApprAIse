@@ -1,11 +1,16 @@
 # Assignment-CSE-30124-RE-ApprAIse
 ApprAIse is an AI model made for buyers and sellers to calculate the price/cost of housing by using Linear Regression based on features such as square footage, bedroom count, bathroom count, etc.
 
+# Final Report
+
+For my final project submission I made edits to the [notebook](https://github.com/NeolGG/CSE-30124-RE-ApprAIse/blob/main/CSE_30124_RE_ApprAIse.ipynb)
+
+I've decided to use a New York State dataset and prioritize estimating housing prices using that data. Dataset can be found [here](https://www.kaggle.com/datasets/polartech/new-york-state-real-estate-dataset)
 # Progress Report 3
 
 ## NEW Python Notebook
 
-I added a Python notebook that can be found [here](https://github.com/NeolGG/CSE-30124-RE-ApprAIse/blob/main/CSE_30124_RE_ApprAIse.ipynb)
+I added a Python notebook that can be found [here](https://github.com/NeolGG/CSE-30124-RE-ApprAIse/blob/main/old/CSE_30124_RE_ApprAIse_old.ipynb)
 
 It uses the [USA Real Estate Dataset](https://www.kaggle.com/datasets/ahmedshahriarsakib/usa-real-estate-dataset) instead of the Kc_county dataset. The Python notebook estimates a price based on housing data per STATE.
 
